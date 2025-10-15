@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Evan's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- custom element -->
+    <style>
+      hero-section, pill-nav { display:block; }
+      pill-nav { padding:.5rem 1rem; border:1px solid #ccc; border-radius:999px; }
+      pill-nav a { margin:0 .5rem; text-decoration:none; }
+      hero-section { text-align:center; padding:3rem 1rem; }
+    </style>
+    <!-- placeholder script -->
+    <script src="https://example.com/analytics.js" defer></script>
+    <!-- console-only custom element -->
+    <script>
+      customElements.define("hello-world", class extends HTMLElement {
+        connectedCallback(){ console.log("Hello world!"); }
+      });
+    </script>
+  </head>
+
+  <body>
+    <noscript>Please enable Javascript to access the best experience</noscript>
+
+    <header>
+      <nav aria-label="Primary">
+        <pill-nav>
+          <a href="#about">About</a>
+          <a href="#experiences">Experiences</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </pill-nav>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About / hero -->
+      <section id="about" aria-labelledby="site-name">
+        <hero-section>
+          <h1 id="site-name">Name</h1>
+          <p>lorem ipsum…</p>
+          <p>
+            <a href="resume.pdf"><button type="button">Resume</button></a>
+            <span> </span>
+            <!-- icons can be real files later -->
+            <a href="https://www.linkedin.com/"><img src="linkedin.png" alt="LinkedIn logo"></a>
+            <a href="https://x.com/"><img src="x.png" alt="X logo"></a>
+            <a href="https://github.com/"><img src="github.png" alt="GitHub logo"></a>
+          </p>
+          <hello-world></hello-world>
+        </hero-section>
+      </section>
+
+      <!-- Experiences -->
+      <section id="experiences" aria-labelledby="work-exp">
+        <h2 id="work-exp">Work Experiences</h2>
+        <article>
+          <h3>Work A</h3>
+          <p>desc</p>
+        </article>
+        <article>
+          <h3>Work B</h3>
+          <p>desc</p>
+        </article>
+        <article>
+          <h3>Work C</h3>
+          <p>desc</p>
+        </article>
+
+        <h2>Leadership Experiences</h2>
+        <ol>
+          <li>
+            <h3>Leadership A</h3>
+            <p>desc</p>
+          </li>
+          <li>
+            <h3>Leadership B</h3>
+            <p>desc</p>
+          </li>
+          <li>
+            <h3>Leadership C</h3>
+            <p>desc</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" aria-labelledby="proj-title">
+        <h2 id="proj-title">Projects</h2>
+        <ul>
+          <li>
+            <article>
+              <h3>Project A</h3>
+              <p>Desc</p>
+              <img src="project-a.jpg" alt="Project A">
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Project B</h3>
+              <p>Desc</p>
+              <img src="project-b.jpg" alt="Project B">
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Project C</h3>
+              <p>Desc</p>
+              <img src="project-c.jpg" alt="Project C">
+            </article>
+          </li>
+        </ul>
+
+        <!-- tiny iframe card-->
+        <iframe title="mini card" width="280" height="90"
+                srcdoc="<p>Small embedded blurb about me.</p>"></iframe>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>desc</p>
+
+        <form>
+          <fieldset>
+            <legend>Send a Message</legend>
+
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" cols="30"></textarea>
+
+            <button type="submit">Send</button>
+          </fieldset>
+        </form>
+
+        <!-- dialog -->
+        <dialog id="thanks">
+          <p><strong>Thanks!</strong> Message noted.</p>
+        </dialog>
+      </section>
+    </main>
+
+    <footer>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <small>&copy; <span>2025</span> Evan Honggo Widjojo</small>
+    </footer>
+  </body>
+</html>
